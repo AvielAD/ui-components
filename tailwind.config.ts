@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns:{
+        'sidebar': '15% 1fr'
+      },
+      gridTemplateRows:{
+        'header': '6% 1fr'
+      }
     },
   },
   plugins: [],

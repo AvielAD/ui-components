@@ -2,7 +2,7 @@
 import "./globals.css";
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-import HeaderTop from '@/app/components/headertop'
+import HeaderTop from '@/components/headertop'
 import { useState } from "react";
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
@@ -33,8 +33,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="en">
       <title>Dashboard</title>
       <body>
-        <HeaderTop routes={routes} actions={actions} ></HeaderTop>
-        {children}
+            {children}
       </body>
     </html>
   );
