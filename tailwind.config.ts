@@ -9,9 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateColumns:{
-        'sidebar': '15% 1fr'
+        'sidebarlx': '20% 1fr',
+        'sidebar': '1fr',
       },
       gridTemplateRows:{
+        'headerlx': '6% 1fr',
         'header': '6% 1fr'
       }
     },

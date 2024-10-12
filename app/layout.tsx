@@ -55,5 +55,10 @@ const routes = [
     nameroute: "Diagnosticos",
     icon: "bi bi-chat-left-quote"
   },
+  {
+    route: "/",
+    nameroute: "Reportes",
+    icon: "bi bi-file-earmark-bar-graph-fill"
+  },
 ]
 
