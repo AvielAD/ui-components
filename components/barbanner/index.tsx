@@ -2,12 +2,12 @@ const Index = (props: { title: string, starmessage: string, arrowmessage: string
     return (
         <div className="container grid px-6 mx-auto">
             <h2
-                className="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+                className="my-6 text-2xl font-semibold text-secondary-700 dark:text-secondary-200"
             >
                 {props.title}
             </h2>
             <a
-                className="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+                className="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-theme3-100 bg-theme3-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-theme3"
                 href=""
             >
                 <div className="flex items-center">

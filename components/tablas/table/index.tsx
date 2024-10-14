@@ -5,7 +5,7 @@ const Index = (props: { elements: Array<{ title: string, status: string, fecha1:
         <table className="w-full whitespace-no-wrap">
           <thead>
             <tr
-              className="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+              className="text-xs font-semibold tracking-wide text-left text-secondary-500 uppercase border-b dark:border-secondary-700 bg-secondary-50 dark:text-secondary-400 dark:bg-secondary-800"
             >
               <th className="px-4 py-3">Equipo</th>
               <th className="px-4 py-3">Status</th>
@@ -13,9 +13,9 @@ const Index = (props: { elements: Array<{ title: string, status: string, fecha1:
               <th className="px-4 py-3">Fecha Entrega</th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+          <tbody className="bg-white divide-y dark:divide-secondary-700 dark:bg-secondary-800">
             {props.elements.map((item, index) => (
-              <tr key={index} className="text-gray-700 dark:text-gray-400">
+              <tr key={index} className="text-secondary-700 dark:text-secondary-400">
                 <td className="px-4 py-3">{item.title}</td>
                 <td className="px-4 py-3">{item.status}</td>
                 <td className="px-4 py-3">{item.fecha1}</td>
