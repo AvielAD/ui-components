@@ -1,12 +1,11 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const Index = (props: { routes: Array<{ route: string, nameroute: string, icon: string }>, actions: Array<{ nameaction: string, action: boolean, setaction: Function }> }) => {
+const Index = (props: { routes: Array<{ route: string, nameroute: string, icon: string }>, actions: Array<{ nameaction: string, action: boolean, setaction: ()=>void }> }) => {
     const [show, setShow] = useState({ toglemenu: false, notimenu: false, profilemenu: false })
 
     const closeMenus = () => {
         setShow({ toglemenu: false, notimenu: false, profilemenu: false })
-        console.log("Close Menus on click")
     }
 
     return (

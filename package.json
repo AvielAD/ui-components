@@ -1,13 +1,19 @@
 {
-  "name": "componentspublish",
+  "name": "@avielad/componentspublish",
   "version": "0.1.0",
-  "private": true,
+  "repository": "https://github.com/AvielAD/ui-components.git",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
+    "next:lint": "next lint",
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build"
   },
+  "main": "dist/export.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "bootstrap-icons": "^1.11.3",
     "next": "14.2.14",
