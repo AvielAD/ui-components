@@ -1,11 +1,13 @@
-import BarBaner from '@/components/barbanner'
-import Modal from '@/components/modal'
-import Sidebar from '@/components/sidebar'
-import HeaderBar from '@/components/haderbar'
+import BarBanner from './barbanner'
+import Modal from './modal'
+import SideBar from './sidebar'
+import HeaderBar from './haderbar'
+import CardBaner from './cardbanner'
 
 export{
-    BarBaner,
+    BarBanner,
     Modal,
-    Sidebar,
-    HeaderBar
+    SideBar,
+    HeaderBar,
+    CardBaner
 }

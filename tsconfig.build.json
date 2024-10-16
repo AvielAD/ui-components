@@ -22,10 +22,9 @@
         "declaration": true
     },
     "include": [
-        "/components/export.ts",
+        "./components/export.ts",
     ],
     "exclude": [
         "node_modules",
-        "C:/Users/aviel/Documents/ProyectsNode/componentspublish/dist"
     ]
 }
