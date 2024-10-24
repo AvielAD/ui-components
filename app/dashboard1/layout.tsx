@@ -3,11 +3,15 @@ import { useState } from "react"
 import SideBarNew from '@/components/sidebar'
 import HeaderBarNew from '@/components/haderbar'
 import ModalNew from '@/components/modal'
+import Form1 from '@/components/formularios/reparacion_add'
+import useToast from "@/components/customhooks/useToast"
+import ToastNew from '@/components/toast'
 
 export default function Index({ children, }: { children: React.ReactNode }) {
     const [showModalRepair, setShowModalRepair] = useState(false)
     const [showModalDiag, setShowModalDiag] = useState(false)
-  
+    const Toast1 = useToast();
+
     const setActionModalRepair = async () => {
       setShowModalRepair(!showModalRepair)
     }
@@ -30,12 +34,15 @@ export default function Index({ children, }: { children: React.ReactNode }) {
     return (
         <div className="grid grid-cols-sidebar grid-rows-header lg:grid-cols-sidebarlx lg:grid-rows-headerlx gap-4 h-screen">
             <ModalNew show={showModalRepair} close={()=>setActionModalRepair()}>
-                Formulario Reparacion
+                <Form1  toast={Toast1.changeToast} closemodal={()=>setActionModalRepair()} ></Form1>
             </ModalNew>
 
             <ModalNew show={showModalDiag} close={()=>setActionModalDiag()}>
                 Formulario Diagonsticos
             </ModalNew>
+
+            <ToastNew Show={Toast1.toast.show} ServerMessage={Toast1.toast.response}></ToastNew>
+
             <div className="hidden lg:grid lg:row-span-2 text-center p-2">
                 <SideBarNew routes={routes} actions={actions}></SideBarNew>
             </div>

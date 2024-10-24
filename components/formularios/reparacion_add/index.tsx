@@ -1,4 +1,11 @@
-const Index = () => {
+import { ServerResponseDto } from "../../customhooks/Dtos/ServerResponse.dto"
+
+const Index = (props: {toast: (params: ServerResponseDto)=>void, closemodal: ()=>void}) => {
+
+    const onSubmit =()=>{
+        props.toast({Message: "Agregado Correctamente", Succedded: false})
+        props.closemodal()
+    }
     return (
         <div className="h-full pb-16 overflow-y-auto">
             <div className="container px-6 mx-auto grid">
@@ -32,6 +39,7 @@ const Index = () => {
                             placeholder="Jane Doe"
                         />
                     </label>
+                    <button type="submit" className="text-black" onClick={()=>onSubmit()}>aceptar</button>
                 </div>
 
             </div>
