@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { ToastDto } from "./Dtos/Toast.dto"
 import { ServerResponseDto } from "./Dtos/ServerResponse.dto"
 

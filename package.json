@@ -1,6 +1,6 @@
 {
   "name": "@avielad/componentspublish",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "repository": "https://github.com/AvielAD/ui-components.git",
   "scripts": {
     "next:dev": "next dev",
