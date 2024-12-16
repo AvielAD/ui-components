@@ -1,7 +1,12 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const Index = (props: { routes: Array<{ route: string, nameroute: string, icon: string }>, actions: Array<{ nameaction: string, action: boolean, setaction: ()=>void }> }) => {
+const Index = (props: {
+    routes: Array<{ route: string, nameroute: string, icon: string }>,
+    actions: Array<{ nameaction: string, action: boolean, setaction: () => void }>,
+    uriconfigs: Array<{ uri: string, name: string, icon: string }>
+}) => {
+
     const [show, setShow] = useState({ toglemenu: false, notimenu: false, profilemenu: false })
 
     const closeMenus = () => {
@@ -121,32 +126,17 @@ const Index = (props: { routes: Array<{ route: string, nameroute: string, icon: 
                                     <i className="bi bi-person-circle object-cover text-xl w-8 h-8 rounded-full"></i>
                                 </button>
                                 <ul className={`${show.profilemenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700`}>
-                                    <li className="flex">
-                                        <a
-                                            className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                            href="#"
-                                        >
-                                            <i className="bi bi-person-fill w-4 h-4 mr-3"></i>
-                                            <span>Profile</span>
-                                        </a>
-                                    </li>
-                                    <li className="flex">
-                                        <a
-                                            className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                            href="#"
-                                        >
-                                            <i className="bi bi-gear-fill w-4 h-4 mr-3"></i>
-                                            <span>Settings</span>
-                                        </a>
-                                    </li>
-                                    <li className="flex">
-                                        <a
-                                            className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                            href="#"
-                                        >
-                                            <i className="bi bi-box-arrow-left w-4 h-4 mr-3"></i>
-                                            <span>Log out</span>
-                                        </a>
+                                    <li className="flex-wrap">
+                                        {
+                                            props.uriconfigs?.map((item: { uri: string, name: string, icon: string }, index) => (
+                                                <Link key={index} className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href={item.uri}>
+                                                    <i className={`${item.icon} w-4 h-4 mr-3`}></i>
+                                                    <span>
+                                                        {item.name}
+                                                    </span>
+                                                </Link>
+                                            ))
+                                        }
                                     </li>
                                 </ul>
                             </li>

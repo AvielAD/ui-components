@@ -9,5 +9,10 @@ declare const Index: (props: {
         action: boolean;
         setaction: () => void;
     }>;
+    uriconfigs: Array<{
+        uri: string;
+        name: string;
+        icon: string;
+    }>;
 }) => import("react/jsx-runtime").JSX.Element;
 export default Index;

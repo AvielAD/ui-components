@@ -47,7 +47,7 @@ export default function Index({ children, }: { children: React.ReactNode }) {
                 <SideBarNew routes={routes} actions={actions}></SideBarNew>
             </div>
             <div className="">
-                <HeaderBarNew routes={routes} actions={actions}></HeaderBarNew>
+                <HeaderBarNew uriconfigs={configactions} routes={routes} actions={actions}></HeaderBarNew>
             </div>
             <div className="p-2">
                 {children}
@@ -78,5 +78,23 @@ const routes = [
       nameroute: "Reportes",
       icon: "bi bi-file-earmark-bar-graph-fill"
     },
+  ]
+
+  const configactions=[
+    {
+      uri: "/dashboard1/pagina1",
+      name: "Profile",
+      icon: "bi bi-person-fill"
+    },
+    {
+      uri: "/dashboard1/pagina1",
+      name: "Settings",
+      icon: "bi bi-gear-fill"
+    },
+    {
+      uri: "/dashboard1/pagina1",
+      name: "Log out",
+      icon: "bi bi-box-arrow-left"
+    }
   ]
   
