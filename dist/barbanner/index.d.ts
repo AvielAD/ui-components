@@ -2,7 +2,7 @@ declare const Index: (props: {
     title: string;
     starmessage: string;
     arrowmessage: string;
-    button: {
+    button?: {
         action: () => void;
         title: string;
         icon: string;
