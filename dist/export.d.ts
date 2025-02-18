@@ -6,4 +6,5 @@ import CardBaner from './cardbanner';
 import Toast from './toast';
 import useToast from './customhooks/useToast';
 import useModal from './customhooks/useModal';
-export { BarBanner, Modal, SideBar, HeaderBar, CardBaner, Toast, useToast, useModal };
+import * as ServerResponseDto from './customhooks/Dtos/ServerResponse.dto';
+export { BarBanner, Modal, SideBar, HeaderBar, CardBaner, Toast, useToast, useModal, ServerResponseDto };
