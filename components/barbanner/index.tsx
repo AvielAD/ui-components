@@ -1,4 +1,4 @@
-const Index = (props: { title: string, starmessage: string, arrowmessage: string, button: {action: ()=> void , title: string, icon: string} | null}) => {
+const Index = (props: { title: string, starmessage: string, arrowmessage: string, button?: {action: ()=> void , title: string, icon: string} | null}) => {
     return (
         <div className="container grid px-6 mx-auto">
             <h2
