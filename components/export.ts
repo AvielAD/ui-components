@@ -6,6 +6,7 @@ import CardBaner from './cardbanner'
 import Toast from './toast'
 import useToast from './customhooks/useToast'
 import useModal from './customhooks/useModal'
+import * as ServerResponseDto from './customhooks/Dtos/ServerResponse.dto'
 export{
     BarBanner,
     Modal,
@@ -14,5 +15,6 @@ export{
     CardBaner,
     Toast,
     useToast,
-    useModal
+    useModal,
+    ServerResponseDto
 }
