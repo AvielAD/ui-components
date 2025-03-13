@@ -6,5 +6,6 @@ import CardBaner from './cardbanner';
 import Toast from './toast';
 import useToast from './customhooks/useToast';
 import useModal from './customhooks/useModal';
+import SkeletonTable from './skeletontable';
 import * as ServerResponseDto from './customhooks/Dtos/ServerResponse.dto';
-export { BarBanner, Modal, SideBar, HeaderBar, CardBaner, Toast, useToast, useModal, ServerResponseDto };
+export { BarBanner, Modal, SideBar, HeaderBar, CardBaner, SkeletonTable, Toast, useToast, useModal, ServerResponseDto };

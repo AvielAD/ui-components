@@ -1,6 +1,4 @@
 // components/SkeletonTable.js
-import React from "react";
-
 const SkeletonTable = () => {
   return (
     <div className="animate-pulse">

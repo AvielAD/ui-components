@@ -26,7 +26,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ServerResponseDto = exports.useModal = exports.useToast = exports.Toast = exports.CardBaner = exports.HeaderBar = exports.SideBar = exports.Modal = exports.BarBanner = void 0;
+exports.ServerResponseDto = exports.useModal = exports.useToast = exports.Toast = exports.SkeletonTable = exports.CardBaner = exports.HeaderBar = exports.SideBar = exports.Modal = exports.BarBanner = void 0;
 var barbanner_1 = __importDefault(require("./barbanner"));
 exports.BarBanner = barbanner_1.default;
 var modal_1 = __importDefault(require("./modal"));
@@ -43,5 +43,7 @@ var useToast_1 = __importDefault(require("./customhooks/useToast"));
 exports.useToast = useToast_1.default;
 var useModal_1 = __importDefault(require("./customhooks/useModal"));
 exports.useModal = useModal_1.default;
+var skeletontable_1 = __importDefault(require("./skeletontable"));
+exports.SkeletonTable = skeletontable_1.default;
 var ServerResponseDto = __importStar(require("./customhooks/Dtos/ServerResponse.dto"));
 exports.ServerResponseDto = ServerResponseDto;
