@@ -1,6 +1,6 @@
 const Index = (props: { elements: Array<{ title: string, status: string, fecha1: string, fecha2: string }> }) => (
-  <div className="h-full pb-16">
-    <div className="w-full mb-8 rounded-lg shadow-xs">
+  <div className="">
+    <div className="w-full rounded-lg shadow-xs">
       <div className="w-full">
         <table className="w-full whitespace-no-wrap">
           <thead>

@@ -3,16 +3,16 @@ import Link from "next/link"
 const Index = (props: { routes: Array<{ route: string, nameroute: string, icon: string }>, actions: Array<{ nameaction: string, action: boolean, setaction: ()=>void }> }) => {
 
     return (
-        <div className="bg-secondary-50 dark:bg-secondary-900">
-            <aside className="bg-white dark:bg-secondary-800 " onClick={(e)=> e.stopPropagation()}>
-                <div className="py-4 text-secondary-500 dark:text-secondary-400">
-                    <a className="ml-6 text-lg font-bold text-secondary-800 dark:text-secondary-200" href="">Empresa</a>
+        <div className="h-full fixed bg-secondary-50 z-50">
+            <aside className="h-full bg-white flex justify-center items-start" onClick={(e)=> e.stopPropagation()}>
+                <div className="py-4 text-secondary-500 ">
+                    <a className="ml-6 text-lg font-bold text-secondary-800" href="">Empresa</a>
                     <ul className="mt-6">
                         {
                             props.routes.map((item, index) => (
                                 <li key={index} className="px-6 py-3">
                                     <Link
-                                        className="inline-flex items-center w-full text-sm font-semibold text-secondary-800 transition-colors duration-150 hover:text-secondary-800 dark:hover:text-secondary-200 dark:text-secondary-100"
+                                        className="inline-flex items-center w-full text-sm font-semibold text-secondary-800 transition-colors duration-150 "
                                         href={item.route}
                                     >
                                         <i className={`${item.icon} text-lg`}></i>

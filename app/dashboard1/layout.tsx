@@ -43,7 +43,7 @@ export default function Index({ children, }: { children: React.ReactNode }) {
 
             <ToastNew Show={Toast1.toast.show} ServerMessage={Toast1.toast.response}></ToastNew>
 
-            <div className="hidden lg:grid lg:row-span-2 text-center p-2">
+            <div className="hidden lg:grid lg:row-span-2 text-center p-2 h-full">
                 <SideBarNew routes={routes} actions={actions}></SideBarNew>
             </div>
             <div className="">

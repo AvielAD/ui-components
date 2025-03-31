@@ -14,11 +14,11 @@ const Index = (props: {
     }
 
     return (
-        <div className=" bg-secondary-50 dark:bg-secondary-900 rounded-lg" onClick={() => closeMenus()}>
-            <div className={`bg-black bg-opacity-50 ${show.toglemenu ? "absolute" : "hidden"} pt-16 w-full h-full`}>
-                <aside onClick={(e) => e.stopPropagation()} className=" bg-white dark:bg-secondary-800 lg:hidden w-64 h-full">
-                    <div className="text-secondary-500 dark:text-secondary-400">
-                        <Link href={"/"}>
+        <div className="fixed top-0 bottom-0 right-0 left-0" onClick={() => closeMenus()}>
+            <div className={`backdrop-blur-md ${show.toglemenu ? "absolute h-full no-doc-scroll" : "hidden"} w-full z-50`}>
+                <aside onClick={(e) => e.stopPropagation()} className=" bg-white lg:hidden w-64 h-full">
+                    <div className="text-secondary-500 ">
+                        <Link href={"/"} className="ml-6 text-lg">
                             Empresa
                         </Link>
                         <ul className="mt-6">
@@ -51,25 +51,12 @@ const Index = (props: {
                 onClick={(e) => e.stopPropagation()}
                 className="flex flex-col flex-1 w-full">
                 <header className="z-10 py-4 bg-white shadow-md dark:bg-secondary-800">
-                    <div className="container flex items-center justify-between h-full px-6 mx-auto text-theme3-600 dark:text-theme3-300">
+                    <div className="container flex items-center justify-between lg:justify-end h-full px-6 mx-auto text-theme3-600 dark:text-theme3-300">
                         <button
                             onClick={() => { setShow({ toglemenu: !show.toglemenu, notimenu: false, profilemenu: false }) }}
                             className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-theme3">
                             <i className="bi bi-list"></i>
                         </button>
-
-                        <div className="flex justify-center flex-1 lg:mr-32">
-                            <div className="relative w-full max-w-xl mr-6 focus-within:text-theme3-500">
-                                <div className="absolute inset-y-0 flex items-center pl-2">
-                                    <i className="bi bi-search"></i>
-                                </div>
-                                <input
-                                    className="w-full h-8 pl-8 pr-2 text-sm text-secondary-700 placeholder-secondary-600 bg-secondary-100 border-0 rounded-md dark:placeholder-secondary-500 dark:focus:shadow-outline-secondary dark:focus:placeholder-secondary-600 dark:bg-secondary-700 dark:text-secondary-200 focus:placeholder-secondary-500 focus:bg-white focus:border-theme3-300 focus:outline-none focus:shadow-outline-theme3 form-input"
-                                    type="text"
-                                    placeholder="Search for projects"
-                                />
-                            </div>
-                        </div>
                         <ul className="inline-flex">
                             <li className="relative mr-5">
                                 <button

@@ -10,10 +10,10 @@ const Index = () => {
         icon: "bi bi-node-plus"
     }
     return (
-        <>
+        <div className='max-w-screen-xl'> 
             <BarBannerNew button={DefButton} title='Reparaciones' starmessage='Filtrado' arrowmessage='Estados'></BarBannerNew>
             <TableNew elements={datainfo}></TableNew>
-        </>
+        </div>
     )
 }
 
