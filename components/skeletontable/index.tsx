@@ -1,7 +1,7 @@
 // components/SkeletonTable.js
 const SkeletonTable = () => {
   return (
-    <div className="animate-pulse">
+    <div className="animate-pulse z-40">
       {/* Banner con título y botón */}
       <div className="bg-secondary-200 h-16 flex items-center justify-between p-4 mb-4">
         <div className="h-4 bg-secondary-300 rounded w-1/4"></div>

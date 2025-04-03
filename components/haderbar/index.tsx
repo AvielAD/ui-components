@@ -14,7 +14,7 @@ const Index = (props: {
     }
 
     return (
-        <div className="fixed top-0 bottom-0 right-0 left-0" onClick={() => closeMenus()}>
+        <div className={` ${show.toglemenu ? "fixed top-0 bottom-0 right-0 left-0":""} `} onClick={() => closeMenus()}>
             <div className={`backdrop-blur-md ${show.toglemenu ? "absolute h-full no-doc-scroll" : "hidden"} w-full z-50`}>
                 <aside onClick={(e) => e.stopPropagation()} className=" bg-white lg:hidden w-64 h-full">
                     <div className="text-secondary-500 ">
