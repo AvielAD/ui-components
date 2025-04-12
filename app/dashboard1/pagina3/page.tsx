@@ -6,18 +6,28 @@ const Index = () => {
 
     const DefButton ={
         action: () => {console.log("Impresion Ejemplo")},
-        title: "Agregar Categoria",
+        title: "Agregar",
         icon: "bi bi-node-plus"
     }
     return (
-        <div className='max-w-screen-xl'> 
-            <BarBannerNew button={DefButton} title='Reparaciones' starmessage='Filtrado' arrowmessage='Estados'></BarBannerNew>
+        <div className='max-w-screen-xl mx-auto'> 
+            <BarBannerNew button={DefButton} title='Reparaciones' messages={Messages}></BarBannerNew>
             <TableNew elements={datainfo}></TableNew>
         </div>
     )
 }
 
 export default Index
+
+const Messages = [
+    {title: "Fecha", message: "12/04/2015"}, 
+    {title: "Comprador", message: "Pepe productor"},
+    {title: "Estado", message: "Completado"},
+    //{title: "Estado", message: "Completado"},
+    //{title: "Estado", message: "Completado"},
+    //{title: "Estado", message: "Completado"}
+]
+
 
 const datainfo = [
     

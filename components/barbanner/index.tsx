@@ -1,29 +1,63 @@
-const Index = (props: { title: string, starmessage: string, arrowmessage: string, button?: {action: ()=> void , title: string, icon: string} | null}) => {
+interface titlemessage {
+    title: string,
+    message: string
+}
+const columnsmessage = [
+    "grid-cols-1",
+    "grid-cols-2",
+    "grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3",
+    "grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4",
+    "grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-5",
+    "grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-6",
+]
+
+const Index = (props:
+    {
+        title: string,
+        messages?: Array<titlemessage>,
+        button?: { action: () => void, title: string, icon: string } | null,
+        buttonback?: { action: () => void } | null
+    }) => {
     return (
-        <div className="container grid px-6 mx-auto">
-            <h2
-                className="my-6 text-2xl font-semibold text-secondary-700 dark:text-secondary-200 flex justify-between"
-            >
-                <p className="">{props.title}</p> 
+        <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-3 my-3">
+            <div className="text-start">
+                <span className="text-xl md:text-4xl font-bold inline-flex">
+                    <i className="bg-theme1-500 bi bi-shop text-white p-1 rounded-lg mr-2 text-2xl"></i>
+                    {props.title}
+                </span>
+            </div>
+            <div className="col-start-3 col-end-4 flex justify-around md:justify-end gap-2">
+                <button className="focus:ring-4 rounded-lg inline-flex p-2 bg-secondary-200"
+                    onClick={() => props.buttonback?.action()}>
+                    <i className="bi bi-arrow-left pr-2"></i>
+                    <p className="">Volver</p>
+                </button>
                 {
-                    props.button ? 
-                        <button 
-                            className="text-white bg-theme3-600 hover:bg-theme3-500 focus:ring-4 rounded-lg px-5 py-2.5 text-center flex align-middle justify-end" 
-                            onClick={()=> props.button?.action()}>
-                            <i className={`mr-2 text-2xl ${props.button.icon}`}></i>
-                            <p className="text-lg">{props.button.title}</p>
+                    props.button ?
+                        <button
+                            className="focus:ring-4 rounded-lg inline-flex bg-theme1-500 text-white p-2"
+                            onClick={() => props.button?.action()}>
+                            <i className={`${props.button.icon} pr-2`}></i>
+                            <p className="">{props.button.title}</p>
                         </button>
-                    : null
+                        : null
                 }
-            </h2>
-            <div
-                className="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-theme3-100 bg-theme3-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-theme3"
-            >
-                <div className="flex items-center">
-                    <i className="bi bi-star mr-2"></i>
-                    <span>{props.starmessage}</span>
+
+            </div>
+            <div className="col-start-1 col-end-4 p-4 shadow-lg rounded-lg bg-white">
+                <div className={`grid ${(props.messages?.length ?? 0) ? columnsmessage[(props.messages?.length ?? 0) - 1] : columnsmessage[0]} gap-2`}>
+                    {
+                        props.messages ?
+                            props.messages.map((item: titlemessage, index: number) => (
+                                <div className="bg-secondary-100 rounded-lg text-left p-2" key={index}>
+                                    <span className="text-secondary-600">{item.title}</span>
+                                    <p>{item.message}</p>
+                                </div>
+                            )) : <></>
+
+                    }
                 </div>
-                <span>{props.arrowmessage} <i className="bi bi-arrow-right"></i></span>
+
             </div>
         </div>
 

@@ -32,7 +32,7 @@ export default function Index({ children, }: { children: React.ReactNode }) {
       }
     ]
     return (
-        <div className="grid grid-cols-sidebar grid-rows-header lg:grid-cols-sidebarlx lg:grid-rows-headerlx gap-4 h-screen">
+        <div className="grid grid-cols-sidebar grid-rows-header lg:grid-cols-sidebarlx lg:grid-rows-headerlx gap-4 h-screen bg-secondary-100">
             <ModalNew show={showModalRepair} close={()=>setActionModalRepair()}>
                 <Form1  toast={Toast1.changeToast} closemodal={()=>setActionModalRepair()} ></Form1>
             </ModalNew>
