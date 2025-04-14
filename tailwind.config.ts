@@ -31,7 +31,7 @@ const config: Config = {
       theme2: colors.indigo,
       theme3: colors.purple,
       theme4: colors.red,
-      theme5: colors.orange
+      theme5: colors.yellow
     }
   },
   plugins: [],

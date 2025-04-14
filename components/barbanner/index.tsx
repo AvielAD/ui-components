@@ -13,7 +13,7 @@ const columnsmessage = [
 
 const Index = (props:
     {
-        title: string,
+        title: {message: string, icon: string},
         messages?: Array<titlemessage>,
         button?: { action: () => void, title: string, icon: string } | null,
         buttonback?: { action: () => void } | null
@@ -22,8 +22,8 @@ const Index = (props:
         <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-3 my-3">
             <div className="text-start">
                 <span className="text-xl md:text-4xl font-bold inline-flex">
-                    <i className="bg-theme1-500 bi bi-shop text-white p-1 rounded-lg mr-2 text-2xl"></i>
-                    {props.title}
+                    <i className={`bg-theme1-500 ${props.title.icon} text-white p-1 rounded-lg mr-2 text-2xl`}></i>
+                    {props.title.message}
                 </span>
             </div>
             <div className="col-start-3 col-end-4 flex justify-around md:justify-end gap-2">
