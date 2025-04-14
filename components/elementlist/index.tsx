@@ -35,12 +35,12 @@ const Index = (props: {
 
                     </div>
                     <div className="">
-                        {props.messages ? props.messages.map((item, index) => (<>
-                            <div className="inline-flex pr-2">
+                        {props.messages ? props.messages.map((item, index) => (
+                            <div className="inline-flex pr-2" key={index}>
                                 <span>{item.title}:</span>
                                 <p>{item.message}</p>
                             </div>
-                        </>)) : null}
+                        )) : null}
                     </div>
 
                 </div>

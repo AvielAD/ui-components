@@ -12,7 +12,7 @@ const Index = () => {
     }
     return (
         <div className='max-w-screen-xl mx-auto'>
-            <BarBannerNew button={DefButton} title={{ message: "Reparaciones", icon: "bi bi-shop" }} messages={Messages}></BarBannerNew>
+            <BarBannerNew button={DefButton} title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} messages={Messages}></BarBannerNew>
             <div className='grid gap-6'>
                 {
                     datacompras ? datacompras.map((item, index:number) =>
