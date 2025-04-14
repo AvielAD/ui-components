@@ -18,5 +18,5 @@ export{
     Toast,
     useToast,
     useModal,
-    ServerResponseDto
+    ServerResponseDto,
 }
