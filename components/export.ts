@@ -8,7 +8,7 @@ import useToast from './customhooks/useToast'
 import useModal from './customhooks/useModal'
 import SkeletonTable from './skeletontable'
 import * as ServerResponseDto from './customhooks/Dtos/ServerResponse.dto'
-import ElementList from '@/components/elementlist'
+import ElementList from './elementlist'
 export{
     BarBanner,
     Modal,

@@ -1,5 +1,4 @@
 'use client'
-import TableNew from '@/components/tablas/table'
 import BarBannerNew from '@/components/barbanner'
 import ElementList from '@/components/elementlist'
 
@@ -78,6 +77,7 @@ const datacompras = [
         buttons: [
             { action: () => { }, title: "Ver detalles" },
             { action: () => { }, title: "Completar" },
+            { action: () => { }, title: "Eliminar" },
         ]
     },
     {
@@ -92,10 +92,11 @@ const datacompras = [
         buttons: [
             { action: () => { }, title: "Ver detalles" },
             { action: () => { }, title: "Completar" },
+            { action: () => { }, title: "Eliminar" },
         ]
     }
 ]
-
+/*
 const datainfo = [
 
     {
@@ -158,4 +159,4 @@ const datainfo = [
         fecha1: "10 oct 2024",
         fecha2: "11 oct 2024"
     },
-]
+]*/
