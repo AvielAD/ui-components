@@ -7,11 +7,15 @@ const Index = () => {
     const DefButton = {
         action: () => { console.log("Impresion Ejemplo") },
         title: "Agregar",
-        icon: "bi bi-node-plus"
+        icon: "bi bi-node-plus",
+        disabled: false
     }
     return (
         <div className='max-w-screen-xl mx-auto'>
-            <BarBannerNew button={DefButton} title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} messages={Messages}></BarBannerNew>
+            <BarBannerNew 
+            button={DefButton} 
+            title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} 
+            messages={Messages}></BarBannerNew>
             <div className='grid gap-6'>
                 {
                     datacompras ? datacompras.map((item, index:number) =>
@@ -60,9 +64,9 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles", disabled: false },
-            { action: () => { }, title: "Completar", disabled: false },
-            { action: () => { }, title: "Eliminar", disabled: false }
+            //{ action: () => { }, title: "Ver detalles", disabled: false },
+            //{ action: () => { }, title: "Completar", disabled: false },
+            //{ action: () => { }, title: "Eliminar", disabled: false }
         ]
     },
     {

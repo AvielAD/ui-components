@@ -15,7 +15,7 @@ const Index = (props:
     {
         title: { message: string, icon: string },
         messages?: Array<titlemessage>,
-        button?: { action: () => void, title: string, icon: string} | null,
+        button?: { action: () => void, title: string, icon: string, disabled: boolean} | null,
         buttonback?: { action: () => void } | null
     }) => {
     return (
@@ -39,7 +39,8 @@ const Index = (props:
                 {
                     props.button ?
                         <button
-                            className="focus:ring-4 rounded-lg inline-flex bg-theme1-500 text-white p-2"
+                            disabled={props.button.disabled}
+                            className={`focus:ring-4 rounded-lg inline-flex ${props.button.disabled ? "bg-secondary-500 text-secondary-50" : "bg-theme1-500 text-white"}  p-2`}
                             onClick={() => props.button?.action()}>
                             <i className={`${props.button.icon} pr-2`}></i>
                             <p className="">{props.button.title}</p>
