@@ -15,7 +15,7 @@ const Index = (props:
     {
         title: { message: string, icon: string },
         messages?: Array<titlemessage>,
-        button?: { action: () => void, title: string, icon: string } | null,
+        button?: { action: () => void, title: string, icon: string, disabled: boolean } | null,
         buttonback?: { action: () => void } | null
     }) => {
     return (
