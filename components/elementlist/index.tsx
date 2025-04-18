@@ -59,7 +59,7 @@ const Index = (props: {
                             <button key={index}
                             onClick={()=>item.action()}
                             disabled={item.disabled}
-                            className="border border-solid border-theme1-500 rounded-lg text-theme1-500 p-1">
+                            className={`border border-solid ${item.disabled ? "border-secondary-500 rounded-lg text-secondary-500 p-1": "border-theme1-500 rounded-lg text-theme1-500 p-1 "}`}>
                                 {item.title}
                             </button>))
                             : null

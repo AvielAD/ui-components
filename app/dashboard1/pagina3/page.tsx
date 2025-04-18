@@ -45,9 +45,9 @@ const datacompras = [
         ],
         bannermessage: "$1500 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
-            { action: () => { }, title: "Eliminar" }
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: true }
         ]
     },
     {
@@ -60,9 +60,9 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
-            { action: () => { }, title: "Eliminar" }
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: false }
         ]
     },
     {
@@ -75,9 +75,9 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
-            { action: () => { }, title: "Eliminar" },
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: false },
         ]
     },
     {
@@ -90,9 +90,9 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
-            { action: () => { }, title: "Eliminar" },
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: false },
         ]
     }
 ]
