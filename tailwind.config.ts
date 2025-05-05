@@ -27,7 +27,7 @@ const config: Config = {
       warning: colors.orange,
       danger: colors.red,
       success: colors.green,
-      theme1: colors.purple,
+      theme1: colors.orange,
       theme2: colors.indigo,
       theme3: colors.purple,
       theme4: colors.red,

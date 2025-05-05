@@ -14,7 +14,7 @@ const Index = (props: {
     }
 
     return (
-        <div className={` ${show.toglemenu ? "fixed top-0 bottom-0 right-0 left-0":""} `} onClick={() => closeMenus()}>
+        <div className={` ${show.toglemenu ? "fixed top-0 bottom-0 right-0 left-0":""}`} onClick={() => closeMenus()}>
             <div className={`backdrop-blur-md ${show.toglemenu ? "absolute h-full no-doc-scroll" : "hidden"} w-full z-50`}>
                 <aside onClick={(e) => e.stopPropagation()} className=" bg-white lg:hidden w-64 h-full">
                     <div className="text-secondary-500 ">
@@ -25,7 +25,7 @@ const Index = (props: {
                             {
                                 props.routes.map((item, index) => (
                                     <li key={index} className="relative px-6 py-3">
-                                        <Link href={item.route} className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-secondary-800 dark:hover:text-secondary-200" >
+                                        <Link href={item.route} className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-secondary-800 " >
                                             <i className={`${item.icon}`}></i>
                                             <span className="ml-4">{item.nameroute}</span>
                                         </Link>
@@ -50,8 +50,8 @@ const Index = (props: {
             <div
                 onClick={(e) => e.stopPropagation()}
                 className="flex flex-col flex-1 w-full">
-                <header className="z-10 py-4 bg-white shadow-md dark:bg-secondary-800">
-                    <div className="container flex items-center justify-between lg:justify-end h-full px-6 mx-auto text-theme3-600 dark:text-theme3-300">
+                <header className="z-10 py-4 bg-white shadow-md rounded-lg">
+                    <div className="container flex items-center justify-between lg:justify-end h-full px-6 mx-auto text-theme3-600 ">
                         <button
                             onClick={() => { setShow({ toglemenu: !show.toglemenu, notimenu: false, profilemenu: false }) }}
                             className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-theme3">
@@ -64,19 +64,19 @@ const Index = (props: {
                                     className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-theme3">
                                     <i className="bi bi-bell-fill"></i>
                                     <span
-                                        className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-theme4-600 border-2 border-white rounded-full dark:border-secondary-800"
+                                        className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-theme4-600 border-2 border-white rounded-full "
                                     ></span>
                                 </button>
 
-                                <ul className={`${show.notimenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-secondary-600 bg-white border border-secondary-100 rounded-md shadow-md dark:text-secondary-300 dark:border-secondary-700 dark:bg-secondary-700 `}>
+                                <ul className={`${show.notimenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-secondary-600 bg-white border border-secondary-100 rounded-md shadow-md `}>
                                     <li className="flex">
                                         <a
-                                            className="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold rounded-md hover:bg-secondary-100 hover:text-secondary-800 dark:hover:bg-secondary-800 dark:hover:text-secondary-200"
+                                            className="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold rounded-md hover:bg-secondary-100 hover:text-secondary-800 "
                                             href="#"
                                         >
                                             <span>Messages</span>
                                             <span
-                                                className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-theme4-600 bg-red-100 rounded-full dark:text-theme4-100 dark:bg-theme4-600"
+                                                className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-theme4-600 bg-red-100 rounded-full "
                                             >
                                                 13
                                             </span>
@@ -84,12 +84,12 @@ const Index = (props: {
                                     </li>
                                     <li className="flex">
                                         <a
-                                            className="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-secondary-100 hover:text-secondary-800 dark:hover:bg-secondary-800 dark:hover:text-secondary-200"
+                                            className="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-secondary-100 hover:text-secondary-800"
                                             href="#"
                                         >
                                             <span>Sales</span>
                                             <span
-                                                className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-theme4-600 bg-theme4-100 rounded-full dark:text-theme4-100 dark:bg-theme4-600"
+                                                className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-theme4-600 bg-theme4-100 rounded-full "
                                             >
                                                 2
                                             </span>
@@ -97,7 +97,7 @@ const Index = (props: {
                                     </li>
                                     <li className="flex">
                                         <a
-                                            className="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                            className="inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                                             href="#"
                                         >
                                             <span>Alerts</span>
@@ -112,11 +112,11 @@ const Index = (props: {
                                     className="align-middle rounded-full focus:shadow-outline-purple focus:outline-none">
                                     <i className="bi bi-person-circle object-cover text-xl w-8 h-8 rounded-full"></i>
                                 </button>
-                                <ul className={`${show.profilemenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700`}>
+                                <ul className={`${show.profilemenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border rounded-md shadow-md`}>
                                     <li className="flex-wrap">
                                         {
                                             props.uriconfigs?.map((item: { uri: string, name: string, icon: string }, index) => (
-                                                <Link key={index} className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200" href={item.uri}>
+                                                <Link key={index} className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md" href={item.uri}>
                                                     <i className={`${item.icon} w-4 h-4 mr-3`}></i>
                                                     <span>
                                                         {item.name}

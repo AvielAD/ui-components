@@ -13,29 +13,34 @@ const columnsmessage = [
 
 const Index = (props:
     {
-        title: {message: string, icon: string},
+        title: { message: string, icon: string },
         messages?: Array<titlemessage>,
-        button?: { action: () => void, title: string, icon: string } | null,
+        button?: { action: () => void, title: string, icon: string, disabled: boolean} | null,
         buttonback?: { action: () => void } | null
     }) => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-3 my-3">
-            <div className="text-start">
-                <span className="text-xl md:text-4xl font-bold inline-flex">
+            <div className="text-start col-start-1 col-end-3">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold inline-flex">
                     <i className={`bg-theme1-500 ${props.title.icon} text-white p-1 rounded-lg mr-2 text-2xl`}></i>
                     {props.title.message}
                 </span>
             </div>
             <div className="col-start-3 col-end-4 flex justify-around md:justify-end gap-2">
-                <button className="focus:ring-4 rounded-lg inline-flex p-2 bg-secondary-200"
-                    onClick={() => props.buttonback?.action()}>
-                    <i className="bi bi-arrow-left pr-2"></i>
-                    <p className="">Volver</p>
-                </button>
+                {
+                    props.buttonback ? 
+                    <button className="focus:ring-4 rounded-lg inline-flex p-2 bg-secondary-200"
+                        onClick={() => props.buttonback?.action()}>
+                        <i className="bi bi-arrow-left pr-2"></i>
+                        <p className="">Volver</p>
+                    </button> : null
+                }
+
                 {
                     props.button ?
                         <button
-                            className="focus:ring-4 rounded-lg inline-flex bg-theme1-500 text-white p-2"
+                            disabled={props.button.disabled}
+                            className={`focus:ring-4 rounded-lg inline-flex ${props.button.disabled ? "bg-secondary-500 text-secondary-50" : "bg-theme1-500 text-white"}  p-2`}
                             onClick={() => props.button?.action()}>
                             <i className={`${props.button.icon} pr-2`}></i>
                             <p className="">{props.button.title}</p>

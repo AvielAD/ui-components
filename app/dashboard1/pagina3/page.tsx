@@ -1,5 +1,4 @@
 'use client'
-import TableNew from '@/components/tablas/table'
 import BarBannerNew from '@/components/barbanner'
 import ElementList from '@/components/elementlist'
 
@@ -8,11 +7,15 @@ const Index = () => {
     const DefButton = {
         action: () => { console.log("Impresion Ejemplo") },
         title: "Agregar",
-        icon: "bi bi-node-plus"
+        icon: "bi bi-node-plus",
+        disabled: false
     }
     return (
         <div className='max-w-screen-xl mx-auto'>
-            <BarBannerNew button={DefButton} title={{ message: "Reparaciones", icon: "bi bi-shop" }} messages={Messages}></BarBannerNew>
+            <BarBannerNew 
+            button={DefButton} 
+            title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} 
+            messages={Messages}></BarBannerNew>
             <div className='grid gap-6'>
                 {
                     datacompras ? datacompras.map((item, index:number) =>
@@ -46,9 +49,9 @@ const datacompras = [
         ],
         bannermessage: "$1500 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
-            { action: () => { }, title: "Eliminar" }
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: true }
         ]
     },
     {
@@ -61,9 +64,9 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
-            { action: () => { }, title: "Eliminar" }
+            //{ action: () => { }, title: "Ver detalles", disabled: false },
+            //{ action: () => { }, title: "Completar", disabled: false },
+            //{ action: () => { }, title: "Eliminar", disabled: false }
         ]
     },
     {
@@ -76,8 +79,9 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: false },
         ]
     },
     {
@@ -90,12 +94,13 @@ const datacompras = [
         ],
         bannermessage: "$1200 mxn",
         buttons: [
-            { action: () => { }, title: "Ver detalles" },
-            { action: () => { }, title: "Completar" },
+            { action: () => { }, title: "Ver detalles", disabled: false },
+            { action: () => { }, title: "Completar", disabled: false },
+            { action: () => { }, title: "Eliminar", disabled: false },
         ]
     }
 ]
-
+/*
 const datainfo = [
 
     {
@@ -158,4 +163,4 @@ const datainfo = [
         fecha1: "10 oct 2024",
         fecha2: "11 oct 2024"
     },
-]
+]*/
