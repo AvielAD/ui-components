@@ -4,7 +4,7 @@ import CardBannerNew from '@/components/cardbanner'
 const Index = () => {
     return (
         <>
-            <BarBannerNew button={null} title='Estadisticas' starmessage='Métricas localfix' arrowmessage='consideraciones más importantes'></BarBannerNew>
+            <BarBannerNew button={null} title={{message: "Estadisticas", icon:""}}></BarBannerNew>
             <div className='grid gap-6 mb-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-4'>
                 {
                     CardsBannerInfo.map((item, index) => (
