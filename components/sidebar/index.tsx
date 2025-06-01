@@ -1,12 +1,22 @@
 import Link from "next/link"
 
-const Index = (props: { routes: Array<{ route: string, nameroute: string, icon: string }>, actions: Array<{ nameaction: string, action: boolean, setaction: ()=>void }> }) => {
+const Index = (props: {
+    routedashboard?: string,
+    routes: Array<{
+        route: string,
+        nameroute: string,
+        icon: string
+    }>, actions: Array<{
+        nameaction: string,
+        action: boolean, setaction: () => void
+    }>
+}) => {
 
     return (
         <div className="h-full fixed bg-secondary-50 z-50">
-            <aside className="h-full bg-white flex justify-center items-start" onClick={(e)=> e.stopPropagation()}>
+            <aside className="h-full bg-white flex justify-center items-start" onClick={(e) => e.stopPropagation()}>
                 <div className="py-4 text-secondary-500 ">
-                    <a className="ml-6 text-lg font-bold text-secondary-800" href="">Empresa</a>
+                    <Link className="ml-6 text-lg font-bold text-secondary-800" href={props.routedashboard ?? "/"}>Dashboard</Link>
                     <ul className="mt-6">
                         {
                             props.routes.map((item, index) => (

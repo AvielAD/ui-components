@@ -13,9 +13,10 @@ const columnsmessage = [
 
 const Index = (props:
     {
+        children?: JSX.Element | null,
         title: { message: string, icon: string },
         messages?: Array<titlemessage>,
-        button?: { action: () => void, title: string, icon: string, disabled: boolean} | null,
+        button?: { action: () => void, title: string, icon: string, disabled: boolean } | null,
         buttonback?: { action: () => void } | null
     }) => {
     return (
@@ -28,12 +29,12 @@ const Index = (props:
             </div>
             <div className="col-start-3 col-end-4 flex justify-around md:justify-end gap-2">
                 {
-                    props.buttonback ? 
-                    <button className="focus:ring-4 rounded-lg inline-flex p-2 bg-secondary-200"
-                        onClick={() => props.buttonback?.action()}>
-                        <i className="bi bi-arrow-left pr-2"></i>
-                        <p className="">Volver</p>
-                    </button> : null
+                    props.buttonback ?
+                        <button className="focus:ring-4 rounded-lg inline-flex p-2 bg-secondary-200"
+                            onClick={() => props.buttonback?.action()}>
+                            <i className="bi bi-arrow-left pr-2"></i>
+                            <p className="">Volver</p>
+                        </button> : null
                 }
 
                 {
@@ -58,7 +59,9 @@ const Index = (props:
                                     <span className="text-secondary-600">{item.title}</span>
                                     <p>{item.message}</p>
                                 </div>
-                            )) : <></>
+                            ))
+                            :
+                            props.children ?? <></>
 
                     }
                 </div>

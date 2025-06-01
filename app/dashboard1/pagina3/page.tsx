@@ -1,8 +1,15 @@
 'use client'
 import BarBannerNew from '@/components/barbanner'
 import ElementList from '@/components/elementlist'
-
+import FormSearchFilters from '@/components/formsearchfilters'
+import { useEffect, useState } from 'react'
 const Index = () => {
+    const [showFilters, setShowFilters] = useState(false)
+    const [dataInput, setDataInput] = useState("")
+
+    const closeMenuFilters =()=>{
+        setShowFilters(!showFilters)
+    }
 
     const DefButton = {
         action: () => { console.log("Impresion Ejemplo") },
@@ -10,12 +17,40 @@ const Index = () => {
         icon: "bi bi-node-plus",
         disabled: false
     }
+    useEffect(()=>{
+        //OnSubmit("");
+        console.log('useeefffect')
+    },[dataInput])
+
+
+
     return (
         <div className='max-w-screen-xl mx-auto'>
             <BarBannerNew 
             button={DefButton} 
             title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} 
-            messages={Messages}></BarBannerNew>
+            messages={Messages}>
+                
+            </BarBannerNew>
+
+            <BarBannerNew 
+            button={DefButton} 
+            title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} 
+            //</div>messages={Messages}
+            >
+                <FormSearchFilters 
+                showFilters={{show: showFilters, setShow: closeMenuFilters}} 
+                datainput={{setValue: setDataInput}}>
+
+                    <form className='grid grid-cols-2' >
+                        <input type="text" placeholder='nombre' />
+                        <input type="text" placeholder='nombre' />
+                        <input type="text" placeholder='nombre' />
+                        <input type="text" placeholder='nombre' />
+                        <button type='submit'>enviar</button>
+                    </form>
+                </FormSearchFilters>
+            </BarBannerNew>
             <div className='grid gap-6'>
                 {
                     datacompras ? datacompras.map((item, index:number) =>
