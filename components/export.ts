@@ -1,7 +1,9 @@
 import BarBanner from './barbanner'
 import Modal from './modal'
 import SideBar from './sidebar'
+import SidebarSub from './sidebarsub'
 import HeaderBar from './haderbar'
+import HeaderBarSub from './headerbarsub'
 import CardBaner from './cardbanner'
 import Toast from './toast'
 import useToast from './customhooks/useToast'
@@ -15,7 +17,9 @@ export{
     BarBanner,
     Modal,
     SideBar,
+    SidebarSub,
     HeaderBar,
+    HeaderBarSub,
     CardBaner,
     SkeletonTable,
     Toast,

@@ -22,10 +22,7 @@ const Index = () => {
         console.log('useeefffect')
     },[dataInput])
 
-    const OnSubmit = (e:any)=>{
-        e.preventDefault()
-        console.log('submiting...')
-    }
+
 
     return (
         <div className='max-w-screen-xl mx-auto'>
@@ -45,7 +42,7 @@ const Index = () => {
                 showFilters={{show: showFilters, setShow: closeMenuFilters}} 
                 datainput={{setValue: setDataInput}}>
 
-                    <form className='grid grid-cols-2' onSubmit={OnSubmit}>
+                    <form className='grid grid-cols-2' >
                         <input type="text" placeholder='nombre' />
                         <input type="text" placeholder='nombre' />
                         <input type="text" placeholder='nombre' />

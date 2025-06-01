@@ -6,7 +6,7 @@ const Index = (props: {
     datainput: {setValue: (value:string)=>void}
 }) => {
     const [datainput, setDataInput]= useState("")
-    const SetValue = (e:any)=>{
+    const SetValue = (e: React.KeyboardEvent<HTMLInputElement>)=>{
         if(e.key === 'Enter'){
             props.datainput.setValue(datainput)
         }

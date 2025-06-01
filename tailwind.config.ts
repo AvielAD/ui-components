@@ -29,9 +29,9 @@ const config: Config = {
       success: colors.green,
       theme1: colors.orange,
       theme2: colors.indigo,
-      theme3: colors.purple,
+      theme3: '#AF272F',
       theme4: colors.red,
-      theme5: colors.yellow
+      theme5: '#AF272F'
     }
   },
   plugins: [],
