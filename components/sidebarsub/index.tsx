@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const Index = (props: {
     titledashboard?: string,
-    subtitledashboard?:string,
+    subtitledashboard?: string,
     routedashboard?: string,
     routes: Array<{
         //route: string,
@@ -15,10 +15,19 @@ const Index = (props: {
         action: boolean, setaction: () => void
     }>
 }) => {
-    const [dropdown, setDropdown] = useState({show: false, name: ""})
+    const [dropdown, setDropdown] = useState<Array<{ show: boolean, name: string }>>([])
 
-    const Button =(value:string)=>{
-        setDropdown({show: !dropdown.show, name:value})
+    const Button = (value: string) => {
+        if (dropdown?.some(x => x.name === value))
+
+            setDropdown(dropdown.map(element => {
+                if (element.name === value) {
+                    return { ...element, show: !element.show }
+                } return element
+            }))
+
+        else
+            setDropdown([...dropdown, { name: value, show: true }])
     }
 
     return (
@@ -34,20 +43,21 @@ const Index = (props: {
                             props.routes.map((item, index) => (
                                 <li key={index} className="px-6 py-4">
                                     <button
-                                    onClick={()=>Button(item.nameroute)}
+                                        onClick={() => Button(item.nameroute)}
                                         className="inline-flex items-center justify-between w-[170px] text-sm font-semibold bg-theme5 text-white px-2 py-2 rounded-lg "
                                     >
                                         <i className={`${item.icon} text-lg`}></i>
                                         <span className="ml-4 w-full text-start">{item.nameroute}</span>
 
                                         <svg className="w-3 h-3" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m1 1 4 4 4-4" />
+                                            <path stroke="currentColor" d="m1 1 4 4 4-4" />
                                         </svg>
                                     </button>
-                                    <ul 
-                                    className={` ${ dropdown.name == item.nameroute && dropdown.show ? "": "hidden"} grid grid-cols-1`}>
+                                    <ul
+                                        className={` ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "" : "hidden"} grid grid-cols-1 `}>
                                         {
-                                            item.submenus?.map((item, index)=>(
+                                            item.submenus?.map((item, index) => (
+
                                                 <Link className="py-2 px-2 w-full text-start hover:bg-theme5 hover:text-white rounded-lg" href={item.uri} key={index}>{item.name}</Link>
                                             ))
 

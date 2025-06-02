@@ -42,7 +42,7 @@ const Index = (props: {
                                             <i className={`${item.icon}`}></i>
                                             <span className="ml-4">{item.nameroute}</span>
                                             <svg className="w-3 h-3" fill="none" viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m1 1 4 4 4-4" />
+                                                <path stroke="currentColor" d="m1 1 4 4 4-4" />
                                             </svg>
                                         </button>
                                         <ul
