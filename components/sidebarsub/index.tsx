@@ -19,7 +19,6 @@ const Index = (props: {
 
     const Button = (value: string) => {
         if (dropdown?.some(x => x.name === value))
-
             setDropdown(dropdown.map(element => {
                 if (element.name === value) {
                     return { ...element, show: !element.show }
