@@ -31,7 +31,12 @@ const config: Config = {
       theme2: colors.indigo,
       theme3: '#AF272F',
       theme4: colors.red,
-      theme5: '#AF272F'
+      theme5: '#AF272F',
+      notification1: colors.blue,//proceso
+      notification2: colors.green,//terminado
+      notification3: colors.yellow,//pausado
+      notification4: colors.gray,//cancelado
+      notification5: colors.purple,//entregado
     }
   },
   plugins: [],

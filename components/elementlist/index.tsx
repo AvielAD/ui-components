@@ -9,10 +9,11 @@ interface buttonsaction {
 }
 
 const StatusInfo = {
-    "DONE": "bg-success-200 text-success-800",
-    "PAUSE": "bg-theme5-200 text-theme5-800",
-    "CANCEL": "bg-danger-200 text-danger-800",
-    "START": "bg-primary-200 text-primary-800",
+    "START":        "bg-notification1-200 text-notificacion1-800",
+    "DONE":         "bg-notification2-200 text-notification2-800",
+    "PAUSE":        "bg-notification3-200 text-notification3-800",
+    "CANCEL":       "bg-notification4-200 text-notification4-800",
+    "DELIVERED":    "bg-notification5-200 text-notification5-800"
 }
 const SpaceButtons = [
     "md:grid-cols-2",
