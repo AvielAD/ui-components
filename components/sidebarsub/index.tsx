@@ -52,8 +52,8 @@ const Index = (props: {
                                             <path stroke="currentColor" d="m1 1 4 4 4-4" />
                                         </svg>
                                     </button>
-                                    <ul
-                                        className={` ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "" : "hidden"} grid grid-cols-1 `}>
+                                    <ul 
+                                        className={`duration-500 transition-all transition-discrete ease-in-out h-0 ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "h-full" : "h-0"} grid grid-cols-1 `}>
                                         {
                                             item.submenus?.map((item, index) => (
 
