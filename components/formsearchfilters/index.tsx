@@ -18,7 +18,7 @@ const Index = (props: {
                     <div className="w-full flex justify-start border-secondary-200 border-solid border-2 rounded-lg">
                         <div className="w-full inline-flex pl-2">
                             <i className="bi bi-search h-4 w-4 "></i>
-                            <input className="w-full px-2 outline-none" type="search" 
+                            <input className="w-full px-2 outline-hidden" type="search" 
                             onChange={(e)=>setDataInput(e.target.value)} 
                             onKeyDown={SetValue}
                             value={datainput}

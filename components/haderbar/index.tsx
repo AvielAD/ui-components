@@ -36,7 +36,7 @@ const Index = (props: {
                         {
                             props.actions.map((item, index) => (
                                 <div key={index} className="px-6 my-6">
-                                    <button onClick={() => item.setaction()} className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-theme3-600 border border-transparent rounded-lg active:bg-theme3-600 hover:bg-theme3-700 focus:outline-none focus:shadow-outline-theme3">
+                                    <button onClick={() => item.setaction()} className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-theme3-600 border border-transparent rounded-lg active:bg-theme3-600 hover:bg-theme3-700 focus:outline-hidden focus:shadow-outline-theme3">
                                         {item.nameaction} <span><i className="bi bi-plus-square"></i></span>
                                     </button>
                                 </div>
@@ -54,14 +54,14 @@ const Index = (props: {
                     <div className="container flex items-center justify-between lg:justify-end h-full px-6 mx-auto text-theme3-600 ">
                         <button
                             onClick={() => { setShow({ toglemenu: !show.toglemenu, notimenu: false, profilemenu: false }) }}
-                            className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-theme3">
+                            className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-hidden focus:shadow-outline-theme3">
                             <i className="bi bi-list"></i>
                         </button>
                         <ul className="inline-flex">
                             <li className="relative mr-5">
                                 <button
                                     onClick={() => setShow({ toglemenu: false, notimenu: !show.notimenu, profilemenu: false })}
-                                    className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-theme3">
+                                    className="relative align-middle rounded-md focus:outline-hidden focus:shadow-outline-theme3">
                                     <i className="bi bi-bell-fill"></i>
                                     <span
                                         className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-theme4-600 border-2 border-white rounded-full "
@@ -109,7 +109,7 @@ const Index = (props: {
                             <li className="relative">
                                 <button
                                     onClick={() => setShow({ toglemenu: false, notimenu: false, profilemenu: !show.profilemenu })}
-                                    className="align-middle rounded-full focus:shadow-outline-purple focus:outline-none">
+                                    className="align-middle rounded-full focus:shadow-outline-purple focus:outline-hidden">
                                     <i className="bi bi-person-circle object-cover text-xl w-8 h-8 rounded-full"></i>
                                 </button>
                                 <ul className={`${show.profilemenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border rounded-md shadow-md`}>

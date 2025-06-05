@@ -14,28 +14,28 @@ const Index = (props: {toast: (params: ServerResponseDto)=>void, closemodal: ()=
                     <label className="block text-sm">
                         <span className="text-secondary-700 dark:text-secondary-400">Name</span>
                         <input
-                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-none focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
+                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-hidden focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
                             placeholder="Jane Doe"
                         />
                     </label>
                     <label className="block text-sm">
                         <span className="text-secondary-700 dark:text-secondary-400">Name</span>
                         <input
-                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-none focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
+                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-hidden focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
                             placeholder="Jane Doe"
                         />
                     </label>
                     <label className="block text-sm">
                         <span className="text-secondary-700 dark:text-secondary-400">Name</span>
                         <input
-                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-none focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
+                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-hidden focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
                             placeholder="Jane Doe"
                         />
                     </label>
                     <label className="block text-sm">
                         <span className="text-secondary-700 dark:text-secondary-400">Name</span>
                         <input
-                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-none focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
+                            className="block w-full mt-1 text-sm dark:border-secondary-600 dark:bg-secondary-700 focus:border-theme3-400 focus:outline-hidden focus:shadow-outline-theme3 dark:text-secondary-300 dark:focus:shadow-outline-secondary form-input"
                             placeholder="Jane Doe"
                         />
                     </label>

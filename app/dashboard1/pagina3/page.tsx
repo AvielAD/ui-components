@@ -25,7 +25,7 @@ const Index = () => {
 
 
     return (
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='max-w-(--breakpoint-xl) mx-auto'>
             <BarBannerNew 
             button={DefButton} 
             title={{ message: "Ingreso de Mercancia", icon: "bi bi-shop" }} 

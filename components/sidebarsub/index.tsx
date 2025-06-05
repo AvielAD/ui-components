@@ -53,7 +53,7 @@ const Index = (props: {
                                         </svg>
                                     </button>
                                     <ul 
-                                        className={`duration-500 transition-all transition-discrete ease-in-out h-0 ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "h-full" : "h-0"} grid grid-cols-1 `}>
+                                        className={`duration-500 transition-all transition-discrete ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "opacity-100" : "opacity-0 hidden"} grid grid-cols-1 `}>
                                         {
                                             item.submenus?.map((item, index) => (
 
@@ -70,7 +70,7 @@ const Index = (props: {
                     {
                         props.actions?.map((item, index) => (
                             <div key={index} className="px-6 my-6">
-                                <button onClick={() => item.setaction()} className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-theme3-600 border border-transparent rounded-lg active:bg-theme3-600 hover:bg-theme3-700 focus:outline-none focus:shadow-outline-theme3">
+                                <button onClick={() => item.setaction()} className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-theme3-600 border border-transparent rounded-lg active:bg-theme3-600 hover:bg-theme3-700 focus:outline-hidden focus:shadow-outline-theme3">
                                     {item.nameaction} <span><i className="bi bi-plus-square"></i></span>
                                 </button>
                             </div>

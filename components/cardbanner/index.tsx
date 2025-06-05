@@ -1,7 +1,7 @@
 const Index = (props: { title: string, value: string, icon: string }) => {
     return (
         <div className="">
-            <div className="flex justify-center items-center p-4 bg-white rounded-lg shadow-xs dark:bg-secondary-800">
+            <div className="flex justify-center items-center p-4 bg-white rounded-lg shadow-2xs dark:bg-secondary-800">
                 <div
                     className="p-4 mr-4 text-theme5-500 bg-theme5-100 rounded-full dark:text-theme5-100 dark:bg-theme5-500"
                 >

@@ -61,7 +61,7 @@ const Index = (props: {
                         {
                             props.actions?.map((item, index) => (
                                 <div key={index} className="px-6 my-6">
-                                    <button onClick={() => item.setaction()} className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-theme3-600 border border-transparent rounded-lg active:bg-theme3-600 hover:bg-theme3-700 focus:outline-none focus:shadow-outline-theme3">
+                                    <button onClick={() => item.setaction()} className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-theme3-600 border border-transparent rounded-lg active:bg-theme3-600 hover:bg-theme3-700 focus:outline-hidden focus:shadow-outline-theme3">
                                         {item.nameaction} <span><i className="bi bi-plus-square"></i></span>
                                     </button>
                                 </div>
@@ -79,7 +79,7 @@ const Index = (props: {
                     <div className="container flex items-center justify-between lg:justify-end h-full px-6 mx-auto text-theme3-600 ">
                         <button
                             onClick={() => { setShow({ toglemenu: !show.toglemenu, notimenu: false, profilemenu: false }) }}
-                            className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-theme3">
+                            className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-hidden focus:shadow-outline-theme3">
                             <i className="bi bi-list"></i>
                         </button>
                         <ul className="inline-flex">
