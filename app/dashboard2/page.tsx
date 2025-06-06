@@ -1,16 +1,23 @@
 'use client'
 import { useState } from "react"
+import styled from './styled.module.css'
 
-const Page = ()=>{
+const Page = () => {
     const [open, setOpen] = useState(false)
+    console.log(open)
 
-    return (<>
-        <button onClick={()=>setOpen(!open)}>Open</button>
-        <ul className={`duration-500 transition-opacity ${open ? "opacity-100" : "opacity-0 invisible"} `}>
-            <li className="duration-300 hover:bg-primary-300"><a href="">opcion 1</a></li>
-            <li className="duration-300 hover:bg-primary-300"><a href="">opcion 2</a></li>
-        </ul>
-    </>)
+    return (<div className=" ">
+        <button className="cursor-pointer" onClick={() => setOpen(!open)}>Open</button>
+
+
+        <div className={` ${styled.divTransition} ${open ? styled.divTransitionOne : ""} `}>
+            <div >
+                <li className=""><a href="">opcion 1</a></li>
+                <li className=""><a href="">opcion 2</a></li>   
+            </div>
+        </div>
+
+    </div>)
 }
 
 export default Page

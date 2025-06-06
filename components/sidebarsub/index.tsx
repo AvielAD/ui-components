@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { useState } from "react"
-
+import styled from './styles.module.css'
 const Index = (props: {
     titledashboard?: string,
     subtitledashboard?: string,
@@ -28,7 +28,7 @@ const Index = (props: {
         else
             setDropdown([...dropdown, { name: value, show: true }])
     }
-
+    console.log(dropdown)
     return (
         <div className="h-full fixed bg-secondary-50 z-50">
             <aside className="h-full bg-white flex justify-center items-start" onClick={(e) => e.stopPropagation()}>
@@ -52,16 +52,20 @@ const Index = (props: {
                                             <path stroke="currentColor" d="m1 1 4 4 4-4" />
                                         </svg>
                                     </button>
-                                    <ul 
-                                        className={`duration-500 transition-all transition-discrete ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "opacity-100" : "opacity-0 hidden"} grid grid-cols-1 `}>
-                                        {
-                                            item.submenus?.map((item, index) => (
+                                    <div
+                                        className={`${styled.divTransition} ${dropdown?.some(x => x.name === item.nameroute && x.show) ? styled.divTransitionComplete : ""} `}>
+                                        <div className={`${styled.divTransitionDiv}`}>
+                                            {
+                                                item.submenus?.map((item, index) => (
+                                                    <div className={` py-2 px-2 w-full text-start hover:bg-theme5 hover:text-white rounded-lg`} key={index}>
+                                                        <Link href={item.uri} >{item.name}</Link>
+                                                    </div>
+                                                ))
 
-                                                <Link className="py-2 px-2 w-full text-start hover:bg-theme5 hover:text-white rounded-lg" href={item.uri} key={index}>{item.name}</Link>
-                                            ))
+                                            }
+                                        </div>
 
-                                        }
-                                    </ul>
+                                    </div>
                                 </li>
                             ))
 

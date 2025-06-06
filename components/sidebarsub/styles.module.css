@@ -1,0 +1,14 @@
+.divTransition{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms;
+}
+
+.divTransitionDiv{
+    overflow: hidden;
+}
+
+
+.divTransitionComplete{
+    grid-template-rows: 1fr;
+}
