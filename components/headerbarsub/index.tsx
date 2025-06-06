@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useState } from "react"
+import styled from './styles.module.css'
 
 const Index = (props: {
     routes: Array<{
@@ -13,14 +14,25 @@ const Index = (props: {
 }) => {
 
     const [show, setShow] = useState({ toglemenu: false, notimenu: false, profilemenu: false })
-    const [dropdown, setDropdown] = useState({ show: false, name: "" })
+    const [dropdown, setDropdown] = useState<Array<{ show: boolean, name: string }>>([])
+    
 
-    const Button = (value: string) => {
-        setDropdown({ show: !dropdown.show, name: value })
-    }
     const closeMenus = () => {
         setShow({ toglemenu: false, notimenu: false, profilemenu: false })
     }
+
+    const Button = (value: string) => {
+        if (dropdown?.some(x => x.name === value))
+            setDropdown(dropdown.map(element => {
+                if (element.name === value) {
+                    return { ...element, show: !element.show }
+                } return element
+            }))
+
+        else
+            setDropdown([...dropdown, { name: value, show: true }])
+    }
+
 
     return (
         <div className={` ${show.toglemenu ? "fixed top-0 bottom-0 right-0 left-0" : ""}`} onClick={() => closeMenus()}>
@@ -45,15 +57,17 @@ const Index = (props: {
                                                 <path stroke="currentColor" d="m1 1 4 4 4-4" />
                                             </svg>
                                         </button>
-                                        <ul
-                                            className={` ${dropdown.name == item.nameroute && dropdown.show ? "" : "hidden"} grid grid-cols-1`}>
+                                        <div
+                                            className={`${styled.divTransition} ${dropdown?.some(x => x.name === item.nameroute && x.show) ? styled.divTransitionComplete : ""} `}>
+                                            <div className={`${styled.divTransitionDiv}`}>
                                             {
                                                 item.submenus?.map((item, index) => (
                                                     <Link className="py-2 px-2 w-full text-start hover:bg-theme5 hover:text-white rounded-lg" href={item.uri} key={index}>{item.name}</Link>
                                                 ))
 
                                             }
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </li>
                                 ))
                             }
@@ -138,7 +152,7 @@ const Index = (props: {
                                     <i className="text-theme5 bi bi-person-circle object-cover text-xl w-8 h-8 rounded-full"></i>
                                 </button>
                                 <ul className={`${show.profilemenu ? "" : "hidden"} absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border rounded-md shadow-md`}>
-                                    <li className="flex-wrap">
+                                    <div className={`flex-wrap`}>
                                         {
                                             props.uriconfigs?.map((item: { uri: string, name: string, icon: string }, index) => (
                                                 <Link key={index} className="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md" href={item.uri}>
@@ -149,7 +163,7 @@ const Index = (props: {
                                                 </Link>
                                             ))
                                         }
-                                    </li>
+                                    </div>
                                 </ul>
                             </li>
                         </ul>
