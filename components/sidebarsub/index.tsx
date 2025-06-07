@@ -28,7 +28,6 @@ const Index = (props: {
         else
             setDropdown([...dropdown, { name: value, show: true }])
     }
-    console.log(dropdown)
     return (
         <div className="h-full fixed bg-secondary-50 z-50">
             <aside className="h-full bg-white flex justify-center items-start" onClick={(e) => e.stopPropagation()}>

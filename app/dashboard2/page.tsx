@@ -1,21 +1,14 @@
 'use client'
-import { useState } from "react"
-import styled from './styled.module.css'
+import MultiTab from '@/components/multitab'
 
 const Page = () => {
-    const [open, setOpen] = useState(false)
-    console.log(open)
 
-    return (<div className=" ">
-        <button className="cursor-pointer" onClick={() => setOpen(!open)}>Open</button>
-
-
-        <div className={` ${styled.divTransition} ${open ? styled.divTransitionOne : ""} `}>
-            <div >
-                <li className=""><a href="">opcion 1</a></li>
-                <li className=""><a href="">opcion 2</a></li>   
-            </div>
-        </div>
+    return (<div className="max-w-2xl">
+        <MultiTab names={["Documentos Adquisicion","Caracteristicas", "Asignacion"]}>
+            <input className='p-2 rounded ring1 ring-danger-400 w-full' type="text" placeholder='Nombre' />
+            <input className='p-2 rounded ring1 ring-danger-400' type="text" placeholder='Email' />
+            <input className='p-2 rounded ring1 ring-danger-400' type="text" placeholder='rfc' />
+        </MultiTab>
 
     </div>)
 }
