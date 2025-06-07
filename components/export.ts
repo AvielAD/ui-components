@@ -12,6 +12,7 @@ import SkeletonTable from './skeletontable'
 import * as ServerResponseDto from './customhooks/Dtos/ServerResponse.dto'
 import ElementList from './elementlist'
 import FormSearhFilters from './formsearchfilters'
+import MultiTab from './multitab'
 
 export{
     BarBanner,
@@ -27,5 +28,6 @@ export{
     useModal,
     ElementList,
     FormSearhFilters,
+    MultiTab,
     ServerResponseDto
 }

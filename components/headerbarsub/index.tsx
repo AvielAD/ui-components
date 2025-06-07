@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { useState } from "react"
-import styled from './styles.module.css'
 
 const Index = (props: {
     routes: Array<{
@@ -58,8 +57,8 @@ const Index = (props: {
                                             </svg>
                                         </button>
                                         <div
-                                            className={`${styled.divTransition} ${dropdown?.some(x => x.name === item.nameroute && x.show) ? styled.divTransitionComplete : ""} `}>
-                                            <div className={`${styled.divTransitionDiv}`}>
+                                            className={`grid grid-rows-[0fr] transition-(grid-template-rows) duration-300 ${dropdown?.some(x => x.name === item.nameroute && x.show) ? "grid-rows-[1fr]" : ""} `}>
+                                            <div className={`overflow-hidden`}>
                                             {
                                                 item.submenus?.map((item, index) => (
                                                     <Link className="py-2 px-2 w-full text-start hover:bg-theme5 hover:text-white rounded-lg" href={item.uri} key={index}>{item.name}</Link>
