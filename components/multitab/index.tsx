@@ -5,6 +5,9 @@ const NoTabs = [
     "grid-cols-1 md:grid-cols-2",
     "grid-cols-1 md:grid-cols-3",
 ]
+const GenTabsStyled = (tam: number) =>{
+    return `grid-cols-1 md:grid-cols-${tam}`
+}
 
 const Index = (props: { children: React.ReactNode[], names: Array<string> }) => {
 
@@ -16,7 +19,7 @@ const Index = (props: { children: React.ReactNode[], names: Array<string> }) => 
     console.log(NoTabs[props.children.length-1])
     return (
         <div className="max-w-screen mx-auto shadow-lg rounded-xl p-2">
-            <div className={`grid ${NoTabs[props.children.length-1]} mb-4 border-b border-secondary-200 dark:border-gray-700`}>
+            <div className={`grid ${GenTabsStyled(props.children.length)} mb-4 border-b border-secondary-200 dark:border-gray-700`}>
                 {
                     props.names.map((item: string, index: number) => (
                         <button key={index} 
