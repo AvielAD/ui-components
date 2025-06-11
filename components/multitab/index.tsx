@@ -17,6 +17,7 @@ const Index = (props: { children: React.ReactNode[], names: Array<string> }) => 
                 {
                     props.names.map((item: string, index: number) => (
                         <button key={index} 
+                        type="button"
                         className={`duration-75 ${dropdown?.name === props.names[index] && dropdown.show ? " border-b-1 border-primary-500" : ""} cursor-pointer inline-block p-4  rounded-t-lg`}
                          onClick={() => Button(item)} >{item}</button>
                     ))
