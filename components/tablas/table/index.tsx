@@ -15,7 +15,7 @@ const Index = (props: { elements: Array<{ title: string, status: string, fecha1:
           </thead>
           <tbody className="bg-white divide-y">
             {props.elements.map((item, index) => (
-              <tr key={index} className="text-secondary-700 dark:text-secondary-400">
+              <tr key={index} className="text-secondary-700 ">
                 <td className="py-3">{item.title}</td>
                 <td className="py-3">{item.status}</td>
                 <td className="py-3">{item.fecha1}</td>
